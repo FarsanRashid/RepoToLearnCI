@@ -1,11 +1,15 @@
 language: python
+python:
+  - "3.5"
+
+#The important part is to install pytest, pytest-cov that allows us to generate the coverage report locally. 
+#(Meaning on the Travis-CI server.) We also need to install coveralls that can submit the the report to the Coveralls.io site.
+
 before_script:
   - pip install -U pytest
   - pip install pytest-cov
   - pip install coveralls
-python:
-  - "3.5"
 script:
   - pytest --cov=math_class test.py
 after_success:
-  - coveralls
+  - coveralls 
