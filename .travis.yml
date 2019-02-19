@@ -1,8 +1,7 @@
 language: python
 before_script:
-  - pip install coverage
   - pip install -U pytest
-  - pip install python-coveralls
+  - pip install pytest-cov
 python:
   - "3.5"
 script:
