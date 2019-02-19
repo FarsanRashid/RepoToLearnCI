@@ -6,4 +6,4 @@ before_install:
 python:
   - "3.5"
 script:
-  - pytest --cov=math_class test.py
+  - py.test --cov=math_class test.py
