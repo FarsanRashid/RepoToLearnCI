@@ -3,3 +3,6 @@ python:
   - "3.5"
 script:
   - python3 test.py
+  - sbt clean coverage test
+  
+ after_success: "sbt coveralls"
